@@ -1,0 +1,70 @@
+<html>
+<?php
+session_start();
+?>
+<center>
+    
+<head>
+<title>
+Military Home
+</title>
+
+<style>
+ body{
+    color:rgb(133, 150, 133);
+background-image: url('images/mili2.jpg');
+    background-size: cover;
+    
+    }</style>
+<h1 style="color:rgb(17, 155, 100);text-align:center;">WELCOME TO  MILITARY  DATA MANAGEMENT HOME PAGE</h1><HR SIZE="4"  COLOR="green">
+<br>
+</head>
+<body>
+<?php
+if($_SESSION["userid"]) {
+?>
+Welcome <?php echo $_SESSION["userid"]; ?>
+<?php
+}else echo "<h1>Please login first .</h1>";
+?>
+<table border=4>
+<a href="ulogin.html"> to login</a>
+
+<tr><th> ENTERING MILITARY DATA </th><tr>
+<tr><td><a href='dep.html'> To Enter Department Data</a></td></tr>
+<tr><td><a href='off.html'> TO Enter Officer Data</a></td></tr>
+<tr><td><a href='soldier.html'> TO Enter Soldier Data</a></td></tr>
+<tr><td><a href='armory.html'> TO Enter Armory Detail</a></td></tr>
+<tr><td><a href='eqip.html'> TO Enter Equipment Detail</a></td></tr>
+</table>
+<br>
+<table border=4>
+
+    <tr><th> VIEWING MILITARY DATA</th><tr>
+    <tr><td><a href='depret.php'> To View Department Data</a></td></tr>
+    <tr><td><a href='offret.php'> To View Officer Data</a></td></tr>
+    <tr><td><a href='soldret.php'>To View Soldier Data</a></td></tr>
+    <tr><td><a href='armoryret.php'>To View Armory Detail</a></td></tr>
+    <tr><td><a href='eqipret.php'>To View Equipment Detail</a></td></tr>
+    </table>
+    <br>
+
+    <table border=4>
+
+        <tr><th> UPDATE / DELETE DATA</th><tr>
+        <tr><td><a href='update_deleteD.html'> To update/delete Department Data</a></td></tr>
+        <tr><td><a href='update_deleteO.html'> To update/delete Officer Data</a></td></tr>
+        <tr><td><a href='update_deleteS.html'>To update/delete Soldier Data</a></td></tr>
+        <tr><td><a href='update_deleteA.html'>To update/delete Armory Detail</a></td></tr>
+        <tr><td><a href='update_deleteE.html'>To update/delete  Equpiment Detail</a></td></tr>
+        </table><br>
+
+    <table border=4>
+        <tr><th>Getting info</th></tr>
+        <tr><td><a href='searchdep3.php'>to get info</a></td></tr>
+    </table>
+
+</body>
+<br>Click here to <a  href="logout.php" tite="Logout">Logout</a>
+</center>
+</html>
